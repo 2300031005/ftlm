@@ -1,0 +1,53 @@
+{
+  "source_endpoint_urls": {
+    "actuals": "https://data.elexon.co.uk/bmrs/api/v1/datasets/FUELHH/stream",
+    "forecasts": "https://data.elexon.co.uk/bmrs/api/v1/datasets/WINDFOR/stream"
+  },
+  "query_parameters": {
+    "actuals": {
+      "settlementDateFrom": "2026-01-02",
+      "settlementDateTo": "2026-02-01",
+      "fuelType": "WIND",
+      "chunk_size_days": 7
+    },
+    "forecasts": {
+      "publishDateTimeFrom": "2025-12-29T00:00:00Z",
+      "publishDateTimeTo": "2026-02-02T00:00:00Z",
+      "chunk_size_days": 7
+    }
+  },
+  "fetched_at_utc": "2026-10-29T05:23:46.383703+00:00",
+  "row_counts": {
+    "actuals_halfhourly": 1488,
+    "forecasts": 14399,
+    "raw_forecasts_before_hindcast_drop": 20440,
+    "hindcast_rows_dropped": 4201
+  },
+  "time_ranges": {
+    "actuals": {
+      "min_startTime": "2026-01-02T00:00:00Z",
+      "max_startTime": "2026-02-01T23:30:00Z"
+    },
+    "forecasts": {
+      "min_startTime": "2026-01-02T00:00:00Z",
+      "max_startTime": "2026-02-02T00:00:00Z",
+      "min_publishTime": "2025-12-31T02:30:00Z",
+      "max_publishTime": "2026-02-01T22:30:00Z"
+    }
+  },
+  "distinct_publish_clock_times_utc": [
+    "02:30",
+    "04:30",
+    "07:30",
+    "09:30",
+    "11:30",
+    "12:25",
+    "15:30",
+    "18:30",
+    "22:30"
+  ],
+  "sha256": {
+    "actuals_halfhourly.csv": "80faa2da0ccb4a376aeed2564cbfe96916cdd5c5b33694e110a03b57005e57c4",
+    "forecasts.csv": "4069b13092d60de1c645ff4a30a502a9f253487469a5f64f9ece2bbf37476a65"
+  }
+}

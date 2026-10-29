@@ -1,0 +1,207 @@
+{
+  "project_name": "Wind Forecast Desk",
+  "project_root": "X:\\reint",
+  "inspection_timestamp": "2026-10-29T11:27:00Z",
+  "frontend": {
+    "framework": "React 19.1.0",
+    "language": "TypeScript 5.8.2",
+    "build_tool": "Vite 6.2.0 (with @tailwindcss/vite 4.1.2)",
+    "entry_point": "frontend/src/main.tsx",
+    "start_command": "cd frontend && npm run dev",
+    "port": "5173",
+    "status": "verified_running"
+  },
+  "backend": {
+    "framework": "FastAPI 0.115.0",
+    "language": "Python 3.12.3",
+    "entry_point": "backend.app.main:app",
+    "start_command": ".\\.venv\\Scripts\\uvicorn.exe backend.app.main:app --host 127.0.0.1 --port 8000",
+    "port": "8000",
+    "status": "verified_running"
+  },
+  "external_services": [
+    {
+      "name": "Elexon BMRS API",
+      "purpose": "Source of national wind actual generation (FUELHH) and forecast runs (WINDFOR)",
+      "endpoints": [
+        "https://bmrs.elexon.co.uk/api-documentation/endpoint/datasets/FUELHH/stream",
+        "https://bmrs.elexon.co.uk/api-documentation/endpoint/datasets/WINDFOR/stream"
+      ],
+      "usage_mode": "Offline snapshot ingestion via backend/scripts/ingest.py. Zero live external network calls are made during runtime."
+    }
+  ],
+  "api_endpoints": [
+    {
+      "path": "/api/health",
+      "method": "GET",
+      "description": "Health check returning status, snapshot SHA-256 integrity, record counts, and delivery dates.",
+      "verified": true
+    },
+    {
+      "path": "/api/meta",
+      "method": "GET",
+      "description": "Metadata listing date range, delivery days, preset cutoffs (09:20, 09:50, 15:30), provenance, and SHA-256 hashes.",
+      "verified": true
+    },
+    {
+      "path": "/api/brief",
+      "method": "GET",
+      "params": [
+        "date",
+        "cutoff"
+      ],
+      "description": "Day-ahead forecast evaluation with P10/P50/P90 empirical uncertainty bands, outcome metrics, and hourly table.",
+      "verified": true
+    },
+    {
+      "path": "/api/drift",
+      "method": "GET",
+      "params": [
+        "date",
+        "cutoff"
+      ],
+      "description": "Forecast revision history and timeline tracking evolution across successive model runs prior to cutoff.",
+      "verified": true
+    },
+    {
+      "path": "/api/accuracy",
+      "method": "GET",
+      "params": [
+        "cutoff"
+      ],
+      "description": "Comprehensive accuracy analytics across January 2026: MAE, RMSE, bias, by-hour, by-level, gate comparison, and look-ahead leakage.",
+      "verified": true
+    },
+    {
+      "path": "/docs",
+      "method": "GET",
+      "description": "Interactive OpenAPI Swagger UI documentation.",
+      "verified": true
+    }
+  ],
+  "environment_variables": [
+    {
+      "name": "VITE_API_URL",
+      "purpose": "Optional frontend base URL override for backend API calls. Defaults to empty string (using Vite dev proxy in development).",
+      "required": false
+    }
+  ],
+  "major_features": [
+    "Decision Brief: Visualizes the latest valid wind forecast strictly available before auction cutoff with P10 firm floor, P50 expected, and P90 upside empirical bands calibrated on other days.",
+    "Outcome Reveal Mode: Allows traders to toggle actual outturn curve, compare against uncertainty bands, and view day-level buying performance.",
+    "Intraday Forecast Drift: Displays forecast evolution across successive Elexon model runs prior to gate closure.",
+    "Accuracy Lab: Multi-dimensional performance metrics including MAE, RMSE, systematic bias (-632 MW / -8.7%), hourly diurnal profile, wind-generation level breakdown, and auction cutoff comparison.",
+    "Look-Ahead Trap Demonstration: Empirical proof quantifying how retrospective post-hoc forecast selection leaks future data and falsely inflates accuracy by 17.27%.",
+    "Empirical Band Backtest: Validates that leave-one-day-out ratio calibration achieves expected empirical coverage across all delivery hours.",
+    "Method & Data Governance: Explains mathematical definitions, sign conventions, Elexon BMRS data pipeline, and cryptographic verification.",
+    "Preset & Custom Cutoffs: Native support for EPEX Day-Ahead (09:20), N2EX Day-Ahead (09:50), and EPEX Half-Hourly (15:30) plus arbitrary custom time input."
+  ],
+  "verified_working_flows": [
+    "Backend service startup on 127.0.0.1:8000 with pre-warming lifespan handler executing in 271 ms.",
+    "Frontend dev server startup on 127.0.0.1:5173 with Vite proxy routing /api requests to backend.",
+    "Full-stack end-to-end data retrieval across all five REST endpoints (/api/health, /api/meta, /api/brief, /api/drift, /api/accuracy).",
+    "Interactive tab navigation across Decision Brief, Forecast Drift, Accuracy Lab, and Method & Governance tabs.",
+    "Delivery date selection and auction cutoff switching updating charts and metrics reactively with client-side session cache.",
+    "Outcome toggle revealing actual delivery curve and contextual outturn statistics.",
+    "Production frontend build via 'npm run build' generating clean bundle with zero TypeScript or CSS errors.",
+    "Backend automated test suite executing 28 passing unit, integration, regression, and snapshot tests in 7.07s.",
+    "Backend code hygiene verified with Ruff linter (0 errors) and Ruff formatter (0 changes needed)."
+  ],
+  "known_issues": [
+    {
+      "id": "ISSUE-01",
+      "severity": "medium",
+      "description": "Git repository is not initialized (.git directory is missing from repository root). Required for public GitHub submission."
+    },
+    {
+      "id": "ISSUE-02",
+      "severity": "medium",
+      "description": "Docker containerization is not yet configured (Dockerfile and docker-compose.yml are absent)."
+    },
+    {
+      "id": "ISSUE-03",
+      "severity": "low",
+      "description": "Evaluation window is currently constrained to the frozen January 2026 snapshot (2026-01-02 to 2026-02-01). Ingestion script exists for updating data."
+    },
+    {
+      "id": "ISSUE-04",
+      "severity": "low",
+      "description": "Windows development sandbox requires BypassSandbox: true for PowerShell commands due to system path isolation restrictions."
+    }
+  ],
+  "tests": [
+    {
+      "suite": "pytest",
+      "target": "backend/tests",
+      "total": 28,
+      "passed": 28,
+      "failed": 0,
+      "skipped": 0,
+      "duration_seconds": 7.07,
+      "status": "passed"
+    },
+    {
+      "suite": "ruff check",
+      "target": "backend",
+      "status": "passed",
+      "details": "0 linting errors detected"
+    },
+    {
+      "suite": "ruff format --check",
+      "target": "backend",
+      "status": "passed",
+      "details": "All files correctly formatted"
+    },
+    {
+      "suite": "tsc --noEmit",
+      "target": "frontend",
+      "status": "passed",
+      "details": "TypeScript compilation passed with 0 errors"
+    },
+    {
+      "suite": "vite build",
+      "target": "frontend/dist",
+      "status": "passed",
+      "details": "Production bundle successfully built"
+    }
+  ],
+  "docker_status": "not_configured",
+  "deployment_status": "not_deployed",
+  "screenshots_directory": "project-evidence/screenshots/",
+  "documentation": {
+    "technical_handoff": "project-evidence/TECHNICAL_HANDOFF.md",
+    "screenshot_manifest": "project-evidence/screenshots/SCREENSHOT_MANIFEST.md"
+  },
+  "recommended_next_steps": [
+    {
+      "priority": "P0",
+      "step": 1,
+      "title": "Initialize Git Repository & Prepare Anonymous Public GitHub Repo",
+      "description": "Initialize git, configure .gitignore to exclude .venv, dist, and cache files, make initial commit with clean message history, and verify no personal identifiers or secrets exist."
+    },
+    {
+      "priority": "P1",
+      "step": 2,
+      "title": "Create Multi-Stage Dockerfile and Docker Compose",
+      "description": "Write a multi-stage Dockerfile bundling the FastAPI backend and built Vite frontend static files (or Nginx reverse proxy), with docker-compose.yml for single-command orchestration."
+    },
+    {
+      "priority": "P1",
+      "step": 3,
+      "title": "Configure Cloud Deployment (Vercel / Render / Heroku / Cloud Run)",
+      "description": "Deploy backend to container runtime and frontend to edge hosting with appropriate environment variable configuration (VITE_API_URL)."
+    },
+    {
+      "priority": "P2",
+      "step": 4,
+      "title": "Add Frontend End-to-End & Component Automated Tests",
+      "description": "Introduce Playwright or Vitest component tests covering user interactions: date picker, cutoff changes, outcome reveal toggle, and chart rendering."
+    },
+    {
+      "priority": "P3",
+      "step": 5,
+      "title": "Automate Continuous Ingestion & Alerting Pipeline",
+      "description": "Package backend/scripts/ingest.py into a scheduled background task or cron job to fetch latest Elexon BMRS updates and extend delivery window beyond January 2026."
+    }
+  ]
+}

@@ -1,0 +1,556 @@
+{
+  "cutoff": "15:30",
+  "window": {
+    "first_delivery_date": "2026-01-02",
+    "last_delivery_date": "2026-02-01",
+    "n_days": 31
+  },
+  "metrics": {
+    "n": 744,
+    "n_missing": 0,
+    "mean_actual": 11283.56,
+    "mean_forecast": 12976.03,
+    "bias": -1692.47,
+    "mae": 1904.01,
+    "rmse": 2361.1,
+    "error_std": 1647.42,
+    "mae_pct_of_mean_actual": 16.87,
+    "error_percentiles": {
+      "p05": -4556.38,
+      "p10": -3847.2,
+      "p25": -2726.12,
+      "p50": -1596.25,
+      "p75": -657.38,
+      "p90": 381.1,
+      "p95": 807.78
+    },
+    "ratio_percentiles": {
+      "p10": 0.7172,
+      "p50": 0.8726,
+      "p90": 1.0364
+    },
+    "bias_share_of_mse": 0.5138
+  },
+  "by_hour": [
+    {
+      "hour_utc": 0,
+      "mean_actual": 11616.0,
+      "mean_forecast": 13547.0,
+      "bias": -1931.0,
+      "mae": 1992.06,
+      "rmse": 2492.55
+    },
+    {
+      "hour_utc": 1,
+      "mean_actual": 11353.79,
+      "mean_forecast": 13449.9,
+      "bias": -2096.11,
+      "mae": 2122.53,
+      "rmse": 2614.16
+    },
+    {
+      "hour_utc": 2,
+      "mean_actual": 11156.5,
+      "mean_forecast": 13352.77,
+      "bias": -2196.27,
+      "mae": 2211.47,
+      "rmse": 2715.48
+    },
+    {
+      "hour_utc": 3,
+      "mean_actual": 11024.76,
+      "mean_forecast": 13267.52,
+      "bias": -2242.76,
+      "mae": 2306.05,
+      "rmse": 2808.19
+    },
+    {
+      "hour_utc": 4,
+      "mean_actual": 10932.56,
+      "mean_forecast": 13170.35,
+      "bias": -2237.79,
+      "mae": 2281.98,
+      "rmse": 2791.9
+    },
+    {
+      "hour_utc": 5,
+      "mean_actual": 10793.29,
+      "mean_forecast": 13051.81,
+      "bias": -2258.52,
+      "mae": 2299.39,
+      "rmse": 2824.21
+    },
+    {
+      "hour_utc": 6,
+      "mean_actual": 10721.06,
+      "mean_forecast": 12933.68,
+      "bias": -2212.61,
+      "mae": 2245.03,
+      "rmse": 2767.55
+    },
+    {
+      "hour_utc": 7,
+      "mean_actual": 10817.06,
+      "mean_forecast": 12848.61,
+      "bias": -2031.55,
+      "mae": 2094.77,
+      "rmse": 2597.96
+    },
+    {
+      "hour_utc": 8,
+      "mean_actual": 10983.13,
+      "mean_forecast": 12781.55,
+      "bias": -1798.42,
+      "mae": 1915.19,
+      "rmse": 2333.8
+    },
+    {
+      "hour_utc": 9,
+      "mean_actual": 11000.63,
+      "mean_forecast": 12749.71,
+      "bias": -1749.08,
+      "mae": 1861.44,
+      "rmse": 2261.69
+    },
+    {
+      "hour_utc": 10,
+      "mean_actual": 11082.03,
+      "mean_forecast": 12708.23,
+      "bias": -1626.19,
+      "mae": 1772.42,
+      "rmse": 2186.51
+    },
+    {
+      "hour_utc": 11,
+      "mean_actual": 11141.97,
+      "mean_forecast": 12630.68,
+      "bias": -1488.71,
+      "mae": 1748.55,
+      "rmse": 2131.51
+    },
+    {
+      "hour_utc": 12,
+      "mean_actual": 11186.48,
+      "mean_forecast": 12515.45,
+      "bias": -1328.97,
+      "mae": 1728.61,
+      "rmse": 2102.5
+    },
+    {
+      "hour_utc": 13,
+      "mean_actual": 11139.5,
+      "mean_forecast": 12420.52,
+      "bias": -1281.02,
+      "mae": 1664.85,
+      "rmse": 2049.3
+    },
+    {
+      "hour_utc": 14,
+      "mean_actual": 11114.52,
+      "mean_forecast": 12396.71,
+      "bias": -1282.19,
+      "mae": 1616.68,
+      "rmse": 2015.59
+    },
+    {
+      "hour_utc": 15,
+      "mean_actual": 11273.35,
+      "mean_forecast": 12471.1,
+      "bias": -1197.74,
+      "mae": 1560.26,
+      "rmse": 1947.22
+    },
+    {
+      "hour_utc": 16,
+      "mean_actual": 11385.52,
+      "mean_forecast": 12640.77,
+      "bias": -1255.26,
+      "mae": 1610.19,
+      "rmse": 2024.62
+    },
+    {
+      "hour_utc": 17,
+      "mean_actual": 11578.03,
+      "mean_forecast": 12850.77,
+      "bias": -1272.74,
+      "mae": 1686.13,
+      "rmse": 2095.87
+    },
+    {
+      "hour_utc": 18,
+      "mean_actual": 11784.61,
+      "mean_forecast": 13098.13,
+      "bias": -1313.52,
+      "mae": 1779.58,
+      "rmse": 2177.56
+    },
+    {
+      "hour_utc": 19,
+      "mean_actual": 11887.1,
+      "mean_forecast": 13259.23,
+      "bias": -1372.13,
+      "mae": 1816.19,
+      "rmse": 2193.85
+    },
+    {
+      "hour_utc": 20,
+      "mean_actual": 11880.52,
+      "mean_forecast": 13305.81,
+      "bias": -1425.29,
+      "mae": 1769.48,
+      "rmse": 2185.57
+    },
+    {
+      "hour_utc": 21,
+      "mean_actual": 11783.23,
+      "mean_forecast": 13332.32,
+      "bias": -1549.1,
+      "mae": 1802.84,
+      "rmse": 2223.5
+    },
+    {
+      "hour_utc": 22,
+      "mean_actual": 11691.87,
+      "mean_forecast": 13331.06,
+      "bias": -1639.19,
+      "mae": 1823.0,
+      "rmse": 2270.84
+    },
+    {
+      "hour_utc": 23,
+      "mean_actual": 11477.87,
+      "mean_forecast": 13311.0,
+      "bias": -1833.13,
+      "mae": 1987.55,
+      "rmse": 2454.52
+    }
+  ],
+  "by_day": [
+    {
+      "delivery_date": "2026-01-02",
+      "mean_actual": 15169.08,
+      "mean_forecast": 18460.92,
+      "bias": -3291.83,
+      "mae": 3291.83
+    },
+    {
+      "delivery_date": "2026-01-03",
+      "mean_actual": 15251.21,
+      "mean_forecast": 17632.12,
+      "bias": -2380.92,
+      "mae": 2380.92
+    },
+    {
+      "delivery_date": "2026-01-04",
+      "mean_actual": 13343.17,
+      "mean_forecast": 14289.21,
+      "bias": -946.04,
+      "mae": 968.58
+    },
+    {
+      "delivery_date": "2026-01-05",
+      "mean_actual": 9439.44,
+      "mean_forecast": 9657.96,
+      "bias": -218.52,
+      "mae": 860.85
+    },
+    {
+      "delivery_date": "2026-01-06",
+      "mean_actual": 9448.52,
+      "mean_forecast": 10721.79,
+      "bias": -1273.27,
+      "mae": 1691.73
+    },
+    {
+      "delivery_date": "2026-01-07",
+      "mean_actual": 12143.1,
+      "mean_forecast": 13616.33,
+      "bias": -1473.23,
+      "mae": 1490.69
+    },
+    {
+      "delivery_date": "2026-01-08",
+      "mean_actual": 4528.06,
+      "mean_forecast": 4901.04,
+      "bias": -372.98,
+      "mae": 1691.73
+    },
+    {
+      "delivery_date": "2026-01-09",
+      "mean_actual": 10756.94,
+      "mean_forecast": 11493.25,
+      "bias": -736.31,
+      "mae": 812.94
+    },
+    {
+      "delivery_date": "2026-01-10",
+      "mean_actual": 8779.23,
+      "mean_forecast": 9635.21,
+      "bias": -855.98,
+      "mae": 1245.19
+    },
+    {
+      "delivery_date": "2026-01-11",
+      "mean_actual": 13557.35,
+      "mean_forecast": 18502.21,
+      "bias": -4944.85,
+      "mae": 4944.85
+    },
+    {
+      "delivery_date": "2026-01-12",
+      "mean_actual": 14452.21,
+      "mean_forecast": 19141.0,
+      "bias": -4688.79,
+      "mae": 4688.79
+    },
+    {
+      "delivery_date": "2026-01-13",
+      "mean_actual": 10068.46,
+      "mean_forecast": 11135.75,
+      "bias": -1067.29,
+      "mae": 1244.67
+    },
+    {
+      "delivery_date": "2026-01-14",
+      "mean_actual": 9670.65,
+      "mean_forecast": 9451.29,
+      "bias": 219.35,
+      "mae": 1007.81
+    },
+    {
+      "delivery_date": "2026-01-15",
+      "mean_actual": 10567.75,
+      "mean_forecast": 11757.54,
+      "bias": -1189.79,
+      "mae": 1189.79
+    },
+    {
+      "delivery_date": "2026-01-16",
+      "mean_actual": 7578.46,
+      "mean_forecast": 8137.75,
+      "bias": -559.29,
+      "mae": 952.0
+    },
+    {
+      "delivery_date": "2026-01-17",
+      "mean_actual": 5646.96,
+      "mean_forecast": 7506.62,
+      "bias": -1859.67,
+      "mae": 1859.67
+    },
+    {
+      "delivery_date": "2026-01-18",
+      "mean_actual": 4976.96,
+      "mean_forecast": 6334.54,
+      "bias": -1357.58,
+      "mae": 1357.58
+    },
+    {
+      "delivery_date": "2026-01-19",
+      "mean_actual": 6526.06,
+      "mean_forecast": 6044.88,
+      "bias": 481.19,
+      "mae": 546.15
+    },
+    {
+      "delivery_date": "2026-01-20",
+      "mean_actual": 15130.25,
+      "mean_forecast": 15448.29,
+      "bias": -318.04,
+      "mae": 1028.67
+    },
+    {
+      "delivery_date": "2026-01-21",
+      "mean_actual": 15731.69,
+      "mean_forecast": 19610.62,
+      "bias": -3878.94,
+      "mae": 3878.94
+    },
+    {
+      "delivery_date": "2026-01-22",
+      "mean_actual": 16188.62,
+      "mean_forecast": 18930.88,
+      "bias": -2742.25,
+      "mae": 2742.25
+    },
+    {
+      "delivery_date": "2026-01-23",
+      "mean_actual": 16146.42,
+      "mean_forecast": 18115.21,
+      "bias": -1968.79,
+      "mae": 1968.79
+    },
+    {
+      "delivery_date": "2026-01-24",
+      "mean_actual": 15867.19,
+      "mean_forecast": 17560.83,
+      "bias": -1693.65,
+      "mae": 1693.65
+    },
+    {
+      "delivery_date": "2026-01-25",
+      "mean_actual": 13602.25,
+      "mean_forecast": 15337.04,
+      "bias": -1734.79,
+      "mae": 1734.79
+    },
+    {
+      "delivery_date": "2026-01-26",
+      "mean_actual": 10439.88,
+      "mean_forecast": 11952.29,
+      "bias": -1512.42,
+      "mae": 1584.79
+    },
+    {
+      "delivery_date": "2026-01-27",
+      "mean_actual": 16408.52,
+      "mean_forecast": 19946.17,
+      "bias": -3537.65,
+      "mae": 3537.65
+    },
+    {
+      "delivery_date": "2026-01-28",
+      "mean_actual": 5759.79,
+      "mean_forecast": 8751.25,
+      "bias": -2991.46,
+      "mae": 2991.46
+    },
+    {
+      "delivery_date": "2026-01-29",
+      "mean_actual": 10192.46,
+      "mean_forecast": 11314.04,
+      "bias": -1121.58,
+      "mae": 1121.58
+    },
+    {
+      "delivery_date": "2026-01-30",
+      "mean_actual": 15837.06,
+      "mean_forecast": 17496.33,
+      "bias": -1659.27,
+      "mae": 1659.27
+    },
+    {
+      "delivery_date": "2026-01-31",
+      "mean_actual": 10423.17,
+      "mean_forecast": 12670.83,
+      "bias": -2247.67,
+      "mae": 2247.67
+    },
+    {
+      "delivery_date": "2026-02-01",
+      "mean_actual": 6159.4,
+      "mean_forecast": 6703.67,
+      "bias": -544.27,
+      "mae": 609.06
+    }
+  ],
+  "by_forecast_level": [
+    {
+      "bin_index": 1,
+      "bin_range": "2,292 - 8,050 MW",
+      "mean_forecast": 6080.59,
+      "mean_actual": 5529.09,
+      "mean_error": -551.5,
+      "ratio": 0.9093
+    },
+    {
+      "bin_index": 2,
+      "bin_range": "8,050 - 11,074 MW",
+      "mean_forecast": 9613.28,
+      "mean_actual": 8361.34,
+      "mean_error": -1251.94,
+      "ratio": 0.8698
+    },
+    {
+      "bin_index": 3,
+      "bin_range": "11,074 - 14,816 MW",
+      "mean_forecast": 12724.43,
+      "mean_actual": 11685.36,
+      "mean_error": -1039.07,
+      "ratio": 0.9183
+    },
+    {
+      "bin_index": 4,
+      "bin_range": "14,816 - 18,328 MW",
+      "mean_forecast": 17024.24,
+      "mean_actual": 14907.06,
+      "mean_error": -2117.18,
+      "ratio": 0.8756
+    },
+    {
+      "bin_index": 5,
+      "bin_range": "18,328 - 21,303 MW",
+      "mean_forecast": 19435.91,
+      "mean_actual": 15937.63,
+      "mean_error": -3498.28,
+      "ratio": 0.82
+    }
+  ],
+  "band_backtest": {
+    "method": "leave_one_day_out",
+    "n_hours": 744,
+    "share_below_firm": 0.1102,
+    "share_within_band": 0.7796,
+    "share_above_upside": 0.1102,
+    "nominal": {
+      "below": 0.1,
+      "within": 0.8,
+      "above": 0.1
+    },
+    "n_days": 31,
+    "days_avg_actual_below_avg_firm": 1,
+    "note": "Hourly shares near nominal mean the band is calibrated per hour. Errors are correlated within a day (one weather system), so whole days can still miss."
+  },
+  "leakage": {
+    "decision_time": {
+      "bias": -1692.47,
+      "mae": 1904.01,
+      "rmse": 2361.1
+    },
+    "naive": {
+      "bias": -1473.1,
+      "mae": 1686.77,
+      "rmse": 2149.66
+    },
+    "mae_gap_mw": 217.24,
+    "mae_gap_pct": 11.41,
+    "naive_definition": "Evaluates the latest published forecast run overall per hourly slot, ignoring decision cutoff timing constraints (lookahead leakage)."
+  },
+  "cutoff_comparison": [
+    {
+      "preset_id": "epex-0920",
+      "cutoff": "09:20",
+      "typical_publish_run": "07:30 UTC (744/744)",
+      "n": 744,
+      "bias": -1747.89,
+      "mae": 2038.91,
+      "rmse": 2504.76,
+      "mae_pct": 18.07
+    },
+    {
+      "preset_id": "n2ex-0950",
+      "cutoff": "09:50",
+      "typical_publish_run": "09:30 UTC (744/744)",
+      "n": 744,
+      "bias": -1729.93,
+      "mae": 2013.01,
+      "rmse": 2505.94,
+      "mae_pct": 17.84
+    },
+    {
+      "preset_id": "epex-hh-1530",
+      "cutoff": "15:30",
+      "typical_publish_run": "11:30 UTC (720/744)",
+      "n": 744,
+      "bias": -1692.47,
+      "mae": 1904.01,
+      "rmse": 2361.1,
+      "mae_pct": 16.87
+    }
+  ],
+  "notes": [
+    "Quintile selection effect: High-forecast quintiles experience greater negative bias (-3.45 GW) partially due to physical curtailment and distribution-level wind exclusion.",
+    "Scope caveat: FUELHH WIND reflects transmission-metered outturn; WINDFOR models national gross wind potential. Discrepancies are consistent with embedded generation and curtailment, not isolated.",
+    "Cutoff strict less-than: Only forecast runs published strictly before cutoff timestamp are eligible for decision-time selection."
+  ]
+}

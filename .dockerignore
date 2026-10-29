@@ -1,0 +1,46 @@
+# Version Control & Git
+.git/
+.gitignore
+
+# Python Environments & Caches
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Node & Frontend Dependencies & Build Artifacts
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+.vite/
+frontend/.vite/
+npm-debug.log*
+
+# Environment Secrets (Preserve .env.example)
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Operating System & IDE Files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temporary Files & Logs
+*.log
+tmp/
+temp/
+
