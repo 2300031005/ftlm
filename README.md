@@ -26,21 +26,12 @@ Electricity buyers at UK utilities purchase wholesale electricity through day-ah
 
 ---
 
-## 2. Visual Overview & Key Screenshots
+## 2. Live Deployment
 
-### Decision Brief Dashboard (1440px Desktop)
-Shows the reconstructed decision-time forecast run (`07:30 UTC` run for `09:20 EPEX` cutoff), expected P50 trajectory, and calibrated P10–P90 green uncertainty band:
-![Decision Brief Dashboard](project-evidence/screenshots/01-home-dashboard.png)
-
-### Accuracy Lab & Diurnal Error Profiles
-Analyzes systematic bias (-632 MW / -8.7% overall), hourly diurnal error patterns, generation quintiles, and auction gate comparisons:
-![Accuracy Lab](project-evidence/screenshots/06-forecast-accuracy.png)
-
-### Mobile Decision Support (360px Viewport)
-Responsive layout engineered with strict design tokens, accessible typography, and horizontal table scrolling:
-![Mobile View](project-evidence/screenshots/18-responsive-mobile-360px-top.png)
-
-*All 18 high-resolution screenshots are catalogued in [`project-evidence/screenshots/SCREENSHOT_MANIFEST.md`](project-evidence/screenshots/SCREENSHOT_MANIFEST.md).*
+| Service | URL |
+|---|---|
+| **Frontend** | [https://ftlm-five.vercel.app/](https://ftlm-five.vercel.app/) |
+| **Backend API** | [https://wind-forecast-api-g0cj.onrender.com/](https://wind-forecast-api-g0cj.onrender.com/) |
 
 ---
 
